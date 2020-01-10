@@ -38,7 +38,7 @@ kubectl get pods --show-labels
 
 2. Remove a label by executing command:
 ``
-kubectl label deployments <-NAME-OF-THE-POD-> "new_label-"
+kubectl label pod <-NAME-OF-THE-POD-> "new_label-"
 ``
 The label should disappear
 ![img](./img/pods_labels3.png)
@@ -72,7 +72,7 @@ kubectl get pods --selector="environment!=dev" --show-labels
 
 4. Delete pods:
 ``
-delete -f pod_labels.yaml
+kubectl delete -f pod_labels.yaml
 ``
 
 ## Task 4. Annotations
