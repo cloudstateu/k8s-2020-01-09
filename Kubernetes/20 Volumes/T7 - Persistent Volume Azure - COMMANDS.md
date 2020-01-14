@@ -17,7 +17,7 @@ kubectl describe sc default
 kubectl describe sc managed-premium
 ```
 
-4. StorageClass dla Azure Files  
+4. StorageClass for Azure Files  
 ```yaml
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
