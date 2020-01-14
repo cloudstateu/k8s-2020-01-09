@@ -35,7 +35,7 @@ mountOptions:
 parameters:
   skuName: Standard_LRS
   ```
-5. CustomRole & Binding dla ServiceAccount  
+5. CustomRole & Binding for ServiceAccount  
 ```yaml
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -61,7 +61,7 @@ subjects:
   namespace: kube-system
 ```
 
-6. PersistanceVolumeClaim z Azure Files  
+6. PersistanceVolumeClaim with Azure Files  
 ```yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -76,7 +76,7 @@ spec:
       storage: 10Gi
 ```
 
-7. Deployment z podpiętym Volume Azure Files  
+7. Deployment - Volume Azure Files  
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
