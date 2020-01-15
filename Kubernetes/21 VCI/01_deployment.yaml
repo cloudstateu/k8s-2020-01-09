@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: cloudstate-vn
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: cloudstate-vn
@@ -15,6 +15,11 @@ spec:
       containers:
       - name: cloudstate-vn
         image: nginx
+        resources:
+          requests:
+            cpu: 10m
+          limits:
+            cpu: 600m
         ports:
         - containerPort: 80
       nodeSelector:
